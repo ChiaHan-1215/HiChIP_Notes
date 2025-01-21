@@ -1,4 +1,4 @@
-# HiChIP_HiC_capture_stuff
+# HiChIP_HiC_capture_stuff with other new tools
 
 - [Observed 1 st](README.md#1st)
 
