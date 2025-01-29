@@ -79,3 +79,15 @@ sh /data/leec20/HiChIP_Miseq_0320/MAPS/bin/Arima-MAPS_v2.0.sh\
 
 ```
 
+```
+#!/bin/bash
+
+source myconda
+conda activate MAPS_new
+ml samtools bedtools bwa
+
+sh /data/leec20/HiChIP_arima_miseq_novaseq_project_091223/MAPS/bin/Arima-MAPS_v2.0.sh -C 1 -p broad -I /data/leec20/HiChIP_arima_miseq_novaseq_project_091223/ELENTA_fastqs/Sample-2 -O /data/leec20/HiChIP_arima_miseq_novaseq_project_091223/Elenta_Output -o hg38 -b /fdb/igenomes/Homo_sapiens/UCSC/hg38/Sequence/BWAIndex/genome.fa -t 6 -f 0
+
+echo all Done
+
+```
