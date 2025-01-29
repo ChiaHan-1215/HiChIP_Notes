@@ -79,6 +79,9 @@ sh /data/leec20/HiChIP_Miseq_0320/MAPS/bin/Arima-MAPS_v2.0.sh\
 
 ```
 
+**Note:**
+-f 1/0 is design for `-f 0` is for shallow seq and `-f 1` is for Deep sequence
+
 ```
 #!/bin/bash
 
