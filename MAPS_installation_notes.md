@@ -106,6 +106,19 @@ echo all Done
 `/usr/local/apps/hicpro/3.1.0_v2/HiC-Pro_3.1.0/bin/utils/`
 - to run the tools, first need to have `config files`, `genome.size files`, and `enzyme digested file`
 
+**genome.szie file**
+Quote from HiC-pro github:
+
+"A table file of chromosomes' size. This file can be easily find on the UCSC genome browser. Of note, pay attention to the contigs or scaffolds, and be aware that HiC-pro will generate a map per chromosomes pair. For model organisms such as Human or Mouse, which are well annotated, we usually recommand to remove all scaffolds."
+
+can download from UCSC, need to remove scafford etc. and just keep chr1 to chr22 and chrXY
+
+hg38: https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes
+hg19: https://hgdownload.soe.ucsc.edu/goldenPath/hg19/bigZips/hg19.chrom.sizes
+
+
+
+
 **Making enzyme digest file for Armia HiChIP kit**
 Since Arima use multiple enzyme digest, need to adjust the script. 
 
@@ -114,9 +127,10 @@ The script look like this:
 `digest_genome.py -r ^GATC G^ANTC -o arima.digest.bed /fdb/igenomes/Homo_sapiens/UCSC/hg19/Sequence/Bowtie2Index/genome.fa`
 
 **Setting config files for running HiC-pro**
-- Config files are located in `/[usr/local/apps/hicpro/config_example.txt](https://github.com/nservant/HiC-Pro/blob/master/config-hicpro.txt)`
-- Copy and edit the configuration file 'config-hicpro.txt' in your local folder.
-- Here's the example for Arima config files, **NOTE** need to change the cpu mem use, Bowtie path depend on hg19 or hg38, and the path of arima enzyme digest file, the genome.size file
+- Config files are located in https://github.com/nservant/HiC-Pro/blob/master/config-hicpro.txt
+- Copy and edit the configuration file `config-hicpro.txt` in your local folder.
+- Here's the example for Arima config files: 
+- **NOTE** need to change the cpu mem use, Bowtie path depend on hg19 or hg38, and the path of arima enzyme digest file, the genome.size file
 
 ```
 #########################################################################
