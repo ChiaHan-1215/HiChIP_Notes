@@ -114,6 +114,7 @@ Quote from HiC-pro github:
 can download from UCSC, need to remove scafford etc. and just keep chr1 to chr22 and chrXY
 
 hg38: https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes
+
 hg19: https://hgdownload.soe.ucsc.edu/goldenPath/hg19/bigZips/hg19.chrom.sizes
 
 
