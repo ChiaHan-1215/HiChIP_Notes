@@ -118,8 +118,6 @@ hg38: https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes
 hg19: https://hgdownload.soe.ucsc.edu/goldenPath/hg19/bigZips/hg19.chrom.sizes
 
 
-
-
 **Making enzyme digest file for Armia HiChIP kit**
 Since Arima use multiple enzyme digest, need to adjust the script. 
 
@@ -225,6 +223,14 @@ FILTER_HIGH_COUNT_PERC = 0
 EPS = 0.1
 
 ```
+--------
+
+#### Using FitHiChIP tool
+
+FitHiChIP is another tool for HiChIP analysis, **it can do the differential loop analysis**. 
+ref: https://ay-lab.github.io/FitHiChIP/html/index.html
+
+**Installation**
 
 
 
