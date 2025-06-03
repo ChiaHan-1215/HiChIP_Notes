@@ -275,8 +275,10 @@ FitHiChIP(S) with ICE bias regression
 - Download public ChIP-seq data from ENCODE
   
   - Here's the example: https://github.com/ay-lab/FitHiChIP/issues/67
-  - In ENCODE, for example, search cell line GM12878 with H3K27Ac ChIp-seq hg38 `bed narrowPeak` format. 
-  - Need to dobule check the genome build is hg19 or hg38 to match your result! 
+    
+  - In ENCODE, for example, search cell line GM12878 with H3K27Ac ChIp-seq hg38 `bed narrowPeak` format.
+    
+  :bell: Need to dobule check the genome build is hg19 or hg38 to match your result! 
 
 - inferring peaks from HiChIP data (for use in the HiChIP pipeline)
 - need to load `ml macs` tool 
