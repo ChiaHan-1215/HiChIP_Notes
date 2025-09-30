@@ -95,9 +95,11 @@ echo all Done
 
 ```
 
----------
+*************
+*************
 
-#### Using HiC-pro to generate the files for other downstream tools
+# Alternative ways to analysis HiChIP 
+## Using HiC-pro to generate the files for other downstream tools
 
 - HiC-pro is most used tools https://github.com/nservant/HiC-Pro
 - Biowulf has HiCpro (ver: 3.1.0_v2) https://hpc.nih.gov/apps/hicpro.html
