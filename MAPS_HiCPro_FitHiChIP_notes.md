@@ -277,7 +277,19 @@ FitHiChIP(S) with coverage bias regression
 
 FitHiChIP(S) with ICE bias regression
 ```
-- 
+
+
+**Example of config file setting** 
+
+- A quick overview, ref from Dovetail: https://dovetail-analysis.readthedocs.io/en/latest/hichip/loop_calling.html#resolution
+
+<img width="706" height="829" alt="Screenshot 2025-09-30 at 12 30 08 PM" src="https://github.com/user-attachments/assets/7a0fa9ce-f481-4bad-9204-ef57a88ea058" />
+
+
+
+
+  
+ 
 
 **how to  generated ChIP-peak:**
 
