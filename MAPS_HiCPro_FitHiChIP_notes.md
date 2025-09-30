@@ -95,8 +95,6 @@ sh /data/leec20/HiChIP_arima_miseq_novaseq_project_091223/MAPS/bin/Arima-MAPS_v2
 echo all Done
 
 ```
-
-*************
 *************
 
 # Alternative ways to analysis HiChIP 
@@ -106,32 +104,14 @@ echo all Done
 - Biowulf has HiCpro (ver: 3.1.0_v2) https://hpc.nih.gov/apps/hicpro.html
 - script location in Biowulf for HiC-pro utils: 
 `/usr/local/apps/hicpro/3.1.0_v2/HiC-Pro_3.1.0/bin/utils/`
-- to run the tools, first need to have `config files`, `genome.size files`, and `enzyme digested file`
-
-**genome.szie file**
-Quote from HiC-pro github:
-
-"A table file of chromosomes' size. This file can be easily find on the UCSC genome browser. Of note, pay attention to the contigs or scaffolds, and be aware that HiC-pro will generate a map per chromosomes pair. For model organisms such as Human or Mouse, which are well annotated, we usually recommand to remove all scaffolds."
-
-can download from UCSC, need to remove scafford etc. and just keep chr1 to chr22 and chrXY
-
-hg38: https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes
-
-hg19: https://hgdownload.soe.ucsc.edu/goldenPath/hg19/bigZips/hg19.chrom.sizes
+- to run the tools, first need to have **`config files`**, **`genome.size files`**, and **`enzyme digested file`**
 
 
-**Making enzyme digest file for Armia HiChIP kit**
-Since Arima use multiple enzyme digest, need to adjust the script. 
-
-According to github: https://github.com/nservant/HiC-Pro/issues/202 and https://github.com/nservant/HiC-Pro/blob/master/doc/FAQ.md
-The script look like this:
-`digest_genome.py -r ^GATC G^ANTC -o arima.digest.bed /fdb/igenomes/Homo_sapiens/UCSC/hg19/Sequence/Bowtie2Index/genome.fa`
-
-**Setting config files for running HiC-pro**
-- Config files are located in https://github.com/nservant/HiC-Pro/blob/master/config-hicpro.txt
-- Copy and edit the configuration file `config-hicpro.txt` in your local folder.
-- Here's the example for Arima config files: 
-- **NOTE** need to change the cpu mem use, Bowtie path depend on hg19 or hg38, and the path of arima enzyme digest file, the genome.size file
+- **config files**
+	- Config files are located in https://github.com/nservant/HiC-Pro/blob/master/config-hicpro.txt
+	- Copy and edit the configuration file `config-hicpro.txt` in your local folder.
+	- Here's the example for Arima config files: 
+	- **NOTE** need to change the cpu mem use, Bowtie path depend on hg19 or hg38, and the path of arima enzyme digest file, the genome.size file
 
 ```
 #########################################################################
@@ -226,12 +206,38 @@ EPS = 0.1
 
 ```
 
-**HiC-Pro output** 
+
+- **genome.szie file**
+	Quote from HiC-pro github:
+
+	"A table file of chromosomes' size. This file can be easily find on the UCSC genome browser. Of note, pay attention to the contigs or scaffolds, and be aware that HiC-pro 	will generate a map per chromosomes pair. For model organisms such as Human or Mouse, which are well annotated, we usually recommand to remove all scaffolds."
+
+	can download from UCSC, need to remove scafford etc. and just keep chr1 to chr22 and chrXY
+
+	hg38: https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes
+
+	hg19: https://hgdownload.soe.ucsc.edu/goldenPath/hg19/bigZips/hg19.chrom.sizes
+
+
+- **enzyme digest file for Armia HiChIP kit**
+	Since Arima use multiple enzyme digest, need to adjust the script. 
+
+	According to github: https://github.com/nservant/HiC-Pro/issues/202 and https://github.com/nservant/HiC-Pro/blob/master/doc/FAQ.md
+	The script look like this:
+	`digest_genome.py -r ^GATC G^ANTC -o arima.digest.bed /fdb/igenomes/Homo_sapiens/UCSC/hg19/Sequence/Bowtie2Index/genome.fa`
+
+
+---------
+
+
+
+- **HiC-Pro output** 
+
 After finished, the output folder look like:
+
 https://github.com/nf-core/hic/blob/master/docs/output.md
 
-
---------
+---------
 
 #### Using FitHiChIP tool
 
@@ -253,7 +259,7 @@ ref: https://ay-lab.github.io/FitHiChIP/html/index.html
 ```
 
 - 4 configure files flavor to select
-- 
+  
 ```
 - configfile_BiasCorrection_CoverageBias
 
