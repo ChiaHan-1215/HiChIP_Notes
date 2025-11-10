@@ -95,7 +95,11 @@ sh /data/leec20/HiChIP_arima_miseq_novaseq_project_091223/MAPS/bin/Arima-MAPS_v2
 echo all Done
 
 ```
+
 *************
+*************
+*************
+
 
 # Alternative ways to analysis HiChIP 
 ## Using HiC-pro to generate the files for other downstream tools
@@ -239,7 +243,7 @@ https://github.com/nf-core/hic/blob/master/docs/output.md
 
 ---------
 
-#### Using FitHiChIP tool
+## FitHiChIP tool for loop calling base on HiC-pro output
 
 FitHiChIP is another tool for HiChIP analysis, **it can do the differential loop analysis**. 
 ref: https://ay-lab.github.io/FitHiChIP/html/index.html
