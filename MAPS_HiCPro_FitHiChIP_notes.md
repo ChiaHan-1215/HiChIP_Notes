@@ -249,7 +249,11 @@ ref: https://ay-lab.github.io/FitHiChIP/html/index.html
 - main command 
 - `bash FitHiChIP_HiCPro.sh -C configuration_file_name`
 
-- reqires:
+
+
+**How to run**
+
+- reqirements:
 
 ```
 - HiC-Pro validpair files
@@ -257,6 +261,17 @@ ref: https://ay-lab.github.io/FitHiChIP/html/index.html
 - chromosme size file
 - config file
 ```
+
+**Step1. Start from HiC-Pro output**
+
+
+
+
+
+
+
+
+**Step2. Setting up configure file and Chip-seq track**
 
 - 4 configure files flavor to select
   
@@ -285,11 +300,6 @@ FitHiChIP(S) with ICE bias regression
 
 <img width="706" height="829" alt="Screenshot 2025-09-30 at 12 30 08 PM" src="https://github.com/user-attachments/assets/7a0fa9ce-f481-4bad-9204-ef57a88ea058" />
 
-
-
-
-  
- 
 
 **how to  generated ChIP-peak:**
 
@@ -337,9 +347,33 @@ The script uses all of the DE, SC, RE and validpairs reads generated from the Hi
 
 - good exlpian:https://hichip.readthedocs.io/en/latest/loops.html
 
+**Step3. Run the script**
+
+First copy the fithichip scripts into your folder
+
+```
+ml fithichip
+cp -r $FITHICHIP_SRC/*  .
+```
+Once the files are there, use the script to run
+
+```
+#!/bin/bash
+ml fithichip
+
+./FitHiChIP_HiCPro.sh -C configfile_test
+
+```
+
+
+
+**The results**
 - The **xxx.interactions_FitHiC_Q0.01_MergeNearContacts_IGV.bedpe** column score is `-log10(fdr)`
 
-**dealing with replicates**:  put all the fastqs of replicates in the same fastq folder, and run HiC-Pro is the preferable way.
+
+**Other Notes**
+	- dealing with replicates:  put all the fastqs of replicates in the same fastq folder, and run HiC-Pro is the preferable way.
+	
 
 
 
