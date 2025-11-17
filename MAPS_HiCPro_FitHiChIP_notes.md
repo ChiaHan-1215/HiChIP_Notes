@@ -383,7 +383,9 @@ ml fithichip
 **Notes**
 	- dealing with replicates:  put all the fastqs of replicates in the same fastq folder, and run HiC-Pro is the preferable way.
 	
-	- Error: When encounting **samtools error samtools sort: fail to open "xxx.bam" Too many open files**. The link provide solution: https://github.com/nservant/HiC-Pro/issues/392
+	- Error: When encounting samtools error samtools sort: fail to open xxx.bam Too many open files.
+	
+	The link provide solution: https://github.com/nservant/HiC-Pro/issues/392
 	
 
 
