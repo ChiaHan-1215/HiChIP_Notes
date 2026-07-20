@@ -172,15 +172,15 @@ GENOME_SIZE = /data/leec20/hichip_CHiC_project/HiC_pro/hg19.chrom.sizes
 ALLELE_SPECIFIC_SNP = 
 
 #######################################################################
-## Digestion Hi-C
+## Digestion Hi-C, below value is according arima guidness: https://discovery.arimagenomics.com/wp-content/files/Arima-HiC-Kit-User-Guide-A160509-v2.pdf
 #######################################################################
 
 GENOME_FRAGMENT = /data/leec20/hichip_CHiC_project/HiC_pro/arima_hg19_hicpro_digest.bed
 LIGATION_SITE = GATCGATC,GANTGATC,GANTANTC,GATCANTC
-MIN_FRAG_SIZE = 100
+MIN_FRAG_SIZE = 10
 MAX_FRAG_SIZE = 100000
 MIN_INSERT_SIZE = 100
-MAX_INSERT_SIZE = 600
+MAX_INSERT_SIZE = 1000
 
 #######################################################################
 ## Hi-C processing
